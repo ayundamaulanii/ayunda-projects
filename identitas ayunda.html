@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayunda Maulani Harmanda - Bisnis Digital UNIMED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .student-info {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .content {
+            text-align: left;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            position: relative;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            padding: 4px 12px;
+            border-radius: 25px;
+            font-weight: 600;
+            color: #333;
+            display: inline-block;
+            margin: 5px 0;
+            box-shadow: 0 5px 15px rgba(246, 211, 101, 0.3);
+        }
+
+        .icon {
+            color: #667eea;
+            margin-right: 10px;
+        }
+
+        .motivation-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .point {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .point:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .point::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .point-number {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #667eea;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .content {
+                font-size: 1em;
+            }
+            
+            .motivation-points {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-picture">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            
+            <h1 class="name">Ayunda Maulani Harmanda</h1>
+            <div class="student-info">
+                <i class="fas fa-graduation-cap icon"></i>
+                Mahasiswi Aktif - Bisnis Digital, Universitas Negeri Medan
+            </div>
+
+            <div class="content">
+                <p><strong>Halo! 👋</strong></p>
+                <p>Saya percaya bahwa di era di mana <span class="highlight">hampir setiap aspek kehidupan bertransformasi ke layar</span>, kemampuan berbisnis secara digital bukan lagi sekadar nilai tambah, melainkan <span class="highlight">kebutuhan mutlak</span>.</p>
+                
+                <div class="motivation-points">
+                    <div class="point">
+                        <div class="point-number">01</div>
+                        <p><strong>Persimpangan Sempurna</strong><br>
+                        Logika data dan seni berinteraksi dengan manusia. Membaca algoritma, tren media sosial, dan analitik pasar.</p>
+                    </div>
+                    
+                    <div class="point">
+                        <div class="point-number">02</div>
+                        <p><strong>Strategi Praktis</strong><br>
+                        Menyusun strategi pemasaran tepat sasaran, mengelola platform e-commerce, dan membangun merek relevan di dunia maya.</p>
+                    </div>
+                    
+                    <div class="point">
+                        <div class="point-number">03</div>
+                        <p><strong>Bukan Penonton, Tapi Aktor</strong><br>
+                        Saya ingin menciptakan ekosistem bisnis yang cerdas, terukur, dan berkelanjutan.</p>
+                    </div>
+                    
+                    <div class="point">
+                        <div class="point-number">04</div>
+                        <p><strong>Memimpin Perubahan</strong><br>
+                        Menjadi digital marketer, analis bisnis, atau membangun startup sendiri di tengah disrupsi teknologi.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 30px; font-style: italic; font-size: 1.2em; color: #667eea; font-weight: 600;">
+                    "Bagi saya, <strong>Bisnis Digital adalah peta untuk menjelajahi lautan peluang tanpa batas</strong>, dan saya siap menjadi nahkoda yang mengarunginya! 🚀"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Efek typing untuk nama
+        const nameElement = document.querySelector('.name');
+        const nameText = nameElement.textContent;
+        nameElement.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < nameText.length) {
+                nameElement.textContent += nameText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Mulai efek typing setelah halaman load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
+        });
+
+        // Efek scroll reveal
+        window.addEventListener('scroll', () => {
+            const points = document.querySelectorAll('.point');
+            points.forEach((point, index) => {
+                const rect = point.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    point.style.opacity = '1';
+                    point.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
