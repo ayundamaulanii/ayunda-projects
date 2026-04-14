@@ -22,7 +22,7 @@
 
         .container {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,7 +35,7 @@
             border-radius: 30px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             padding: 50px;
-            max-width: 800px;
+            max-width: 900px;
             text-align: center;
             position: relative;
             animation: fadeInUp 1s ease-out;
@@ -58,13 +58,13 @@
             height: 120px;
             border-radius: 50%;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 48px;
             color: white;
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.4);
             animation: pulse 2s infinite;
         }
 
@@ -77,7 +77,7 @@
         .name {
             font-size: 2.5em;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -106,23 +106,23 @@
             top: 0;
             width: 4px;
             height: 100%;
-            background: linear-gradient(180deg, #667eea, #764ba2);
+            background: linear-gradient(180deg, #4facfe, #00f2fe);
             border-radius: 2px;
         }
 
         .highlight {
-            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
             padding: 4px 12px;
             border-radius: 25px;
             font-weight: 600;
             color: #333;
             display: inline-block;
             margin: 5px 0;
-            box-shadow: 0 5px 15px rgba(246, 211, 101, 0.3);
+            box-shadow: 0 5px 15px rgba(168, 237, 234, 0.3);
         }
 
         .icon {
-            color: #667eea;
+            color: #4facfe;
             margin-right: 10px;
         }
 
@@ -136,18 +136,20 @@
         }
 
         .point {
-            background: #f8f9ff;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
+            background: #f8fbff;
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 5px solid #4facfe;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .point:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+            background: #f0f8ff;
         }
 
         .point::before {
@@ -157,23 +159,30 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
         }
 
         .point-number {
             font-size: 1.5em;
             font-weight: 700;
-            color: #667eea;
+            color: #4facfe;
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .point-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
         }
 
         @media (max-width: 768px) {
@@ -252,47 +261,51 @@
     <div class="container">
         <div class="profile-card">
             <div class="profile-picture">
-                <i class="fas fa-user-graduate"></i>
+                <i class="fas fa-laptop-code"></i>
             </div>
             
             <h1 class="name">Ayunda Maulani Harmanda</h1>
             <div class="student-info">
                 <i class="fas fa-graduation-cap icon"></i>
-                Mahasiswi Aktif - Bisnis Digital, Universitas Negeri Medan
+                Mahasiswi Aktif - Program Studi Bisnis Digital<br>
+                <i class="fas fa-university icon"></i>
+                Universitas Negeri Medan
             </div>
 
             <div class="content">
                 <p><strong>Halo! 👋</strong></p>
-                <p>Saya percaya bahwa di era di mana <span class="highlight">hampir setiap aspek kehidupan bertransformasi ke layar</span>, kemampuan berbisnis secara digital bukan lagi sekadar nilai tambah, melainkan <span class="highlight">kebutuhan mutlak</span>.</p>
+                <p><strong>Alasan memilih Bisnis Digital?</strong></p>
+                <p>Saya memilih jurusan Bisnis Digital karena saya percaya bahwa di era di mana <span class="highlight">hampir setiap aspek kehidupan bertransformasi ke layar</span>, kemampuan berbisnis secara digital bukan lagi sekadar nilai tambah, melainkan <span class="highlight">kebutuhan mutlak</span>.</p>
                 
                 <div class="motivation-points">
                     <div class="point">
                         <div class="point-number">01</div>
-                        <p><strong>Persimpangan Sempurna</strong><br>
-                        Logika data dan seni berinteraksi dengan manusia. Membaca algoritma, tren media sosial, dan analitik pasar.</p>
+                        <h3 class="point-title">🌐 Dunia Sekarang Serba Online</h3>
+                        <p>Semua orang belanja, jualan, dan cari kerja lewat internet. Jurusan ini mengajarkan cara <strong>memanfaatkan situasi tersebut untuk mencari uang</strong>.</p>
                     </div>
                     
                     <div class="point">
                         <div class="point-number">02</div>
-                        <p><strong>Strategi Praktis</strong><br>
-                        Menyusun strategi pemasaran tepat sasaran, mengelola platform e-commerce, dan membangun merek relevan di dunia maya.</p>
+                        <h3 class="point-title">⚡ Langsung Bisa Dipraktikkan</h3>
+                        <p>Tidak perlu nunggu lulus dulu. Ilmu seperti <strong>bikin toko online, pasang iklan di medsos, atau analisa data pengunjung website</strong> bisa langsung dicoba sekarang juga.</p>
                     </div>
                     
                     <div class="point">
                         <div class="point-number">03</div>
-                        <p><strong>Bukan Penonton, Tapi Aktor</strong><br>
-                        Saya ingin menciptakan ekosistem bisnis yang cerdas, terukur, dan berkelanjutan.</p>
+                        <h3 class="point-title">💼 Peluang Kerja Luas</h3>
+                        <p>Banyak perusahaan butuh anak muda yang paham digital. Mulai dari <strong>startup, UMKM, hingga perusahaan besar</strong>. Bahkan bisa buka usaha sendiri tanpa modal besar.</p>
                     </div>
                     
                     <div class="point">
                         <div class="point-number">04</div>
-                        <p><strong>Memimpin Perubahan</strong><br>
-                        Menjadi digital marketer, analis bisnis, atau membangun startup sendiri di tengah disrupsi teknologi.</p>
+                        <h3 class="point-title">🎯 Tidak Perlu Jadi Ahli Matematika atau Desainer</h3>
+                        <p>Modal utamanya <strong>mau belajar dan kreatif</strong>. Yang penting paham strategi dan perilaku orang di internet. Sisanya bisa dipelajari sambil jalan.</p>
                     </div>
                 </div>
 
-                <p style="margin-top: 30px; font-style: italic; font-size: 1.2em; color: #667eea; font-weight: 600;">
-                    "Bagi saya, <strong>Bisnis Digital adalah peta untuk menjelajahi lautan peluang tanpa batas</strong>, dan saya siap menjadi nahkoda yang mengarunginya! 🚀"
+                <p style="margin-top: 40px; font-size: 1.3em; color: #4facfe; font-weight: 600; background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%); padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(168, 237, 234, 0.3);">
+                    <i class="fas fa-rocket icon"></i>
+                    <strong>Saya siap memanfaatkan peluang digital dan membangun karir impian!</strong> 🚀
                 </p>
             </div>
         </div>
@@ -318,16 +331,28 @@
             setTimeout(typeWriter, 500);
         });
 
-        // Efek scroll reveal
-        window.addEventListener('scroll', () => {
-            const points = document.querySelectorAll('.point');
-            points.forEach((point, index) => {
-                const rect = point.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    point.style.opacity = '1';
-                    point.style.transform = 'translateY(0)';
+        // Efek scroll reveal untuk points
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
                 }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('.point').forEach(point => {
+            point.style.opacity = '0';
+            point.style.transform = 'translateY(30px)';
+            point.style.transition = 'all 0.6s ease';
+            observer.observe(point);
         });
     </script>
 </body>
