@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayunda Maulani Harmanda - Bisnis Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6b48ff 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(30, 60, 114, 0.3);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(45deg, #1e3c72, #2a5298, #6b48ff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.15"/><circle cx="75" cy="75" r="1.5" fill="white" opacity="0.15"/><circle cx="50" cy="10" r="0.8" fill="white" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .name {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .title {
+            font-size: 1.4em;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .intro {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 35px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #6b48ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .paragraph {
+            margin-bottom: 30px;
+            text-align: justify;
+            font-size: 1.15em;
+            line-height: 1.95;
+            color: #2d3748;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(107, 72, 255, 0.1), rgba(42, 82, 152, 0.1));
+            padding: 20px 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-left: 6px solid #6b48ff;
+            box-shadow: 0 8px 25px rgba(107, 72, 255, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        .highlight strong {
+            color: #1e3c72;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6b48ff 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social-title {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 25px;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.8em;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .instagram { 
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            color: white; 
+        }
+        .whatsapp { 
+            background: linear-gradient(45deg, #25d366, #128c7e); 
+            color: white; 
+        }
+        .telegram { 
+            background: linear-gradient(45deg, #0088cc, #229ED9); 
+            color: white; 
+        }
+        .tiktok { 
+            background: linear-gradient(45deg, #000000, #ff0050); 
+            color: white; 
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95em;
+            margin-top: 25px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .name { font-size: 2.2em; }
+            .content { padding: 40px 25px; }
+            .paragraph { font-size: 1.05em; }
+            .social-links { gap: 15px; }
+            .social-btn { width: 55px; height: 55px; font-size: 1.6em; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="header">
+            <h1 class="name">Ayunda Maulani Harmanda</h1>
+            <p class="title">Mahasiswi Aktif - Bisnis Digital<br>Universitas Negeri Medan</p>
+        </div>
+
+        <div class="content">
+            <p class="intro">Halo! 👋</p>
+            
+            <div class="paragraph">
+                Nama saya <strong>Ayunda Maulani Harmanda</strong>. Saya adalah mahasiswi aktif dengan program studi <strong>Bisnis Digital</strong> di <strong>Universitas Negeri Medan</strong>.
+            </div>
+
+            <div class="highlight">
+                <strong>Alasan saya memilih jurusan Bisnis Digital:</strong><br>
+                Saya percaya bahwa di era di mana hampir setiap aspek kehidupan bertransformasi ke layar, kemampuan berbisnis secara digital bukan lagi sekadar nilai tambah, melainkan <em>kebutuhan mutlak</em>.
+            </div>
+
+            <div class="paragraph">
+                Jurusan ini menarik bagi saya karena ia berada di <strong>persimpangan sempurna antara logika data dan seni berinteraksi dengan manusia</strong>. Saya tidak hanya akan belajar membaca algoritma, tren media sosial, dan analitik pasar, tetapi juga bagaimana menyusun strategi pemasaran yang tepat sasaran, mengelola platform e-commerce, serta membangun merek yang relevan di dunia maya.
+            </div>
+
+            <div class="highlight">
+                <strong>"Saya tidak ingin menjadi penonton yang hanya menikmati kemudahan belanja online atau konten viral, saya ingin menjadi aktor di balik layar yang menciptakan ekosistem bisnis yang cerdas, terukur, dan berkelanjutan."</strong>
+            </div>
+
+            <div class="paragraph">
+                Lebih dari sekadar teori kewirausahaan, jurusan ini menawarkan keterampilan praktis dan adaptif yang memungkinkan saya untuk tidak hanya bersaing, tetapi juga <strong>memimpin perubahan</strong> di tengah disrupsi teknologi - baik itu menjadi seorang digital marketer, analis bisnis, atau membangun startup sendiri.
+            </div>
+
+            <div class="highlight">
+                <strong>"Bagi saya, Bisnis Digital adalah peta untuk menjelajahi lautan peluang tanpa batas, dan saya siap menjadi nahkoda yang mengarunginya!"</strong>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://instagram.com/ayundamaulanii" target="_blank" class="social-btn instagram" title="Instagram" rel="noopener">
+                    📸
+                </a>
+                <a href="https://wa.me/6281360815523" target="_blank" class="social-btn whatsapp" title="WhatsApp" rel="noopener">
+                    💬
+                </a>
+                <a href="https://t.me/cupkieseuu" target="_blank" class="social-btn telegram" title="Telegram" rel="noopener">
+                    ✈️
+                </a>
+                <a href="https://tiktok.com/@yummyeaye" target="_blank" class="social-btn tiktok" title="TikTok" rel="noopener">
+                    🎵
+                </a>
+            </div>
+            <p class="copyright">© 2024 Ayunda Maulani Harmanda | Digital Business Student 🚀</p>
+        </div>
+    </div>
+</body>
+</html>
