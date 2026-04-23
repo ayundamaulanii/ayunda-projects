@@ -4,101 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayunda Maulani Harmanda - Data Diri</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap.css">
 </head>
-<body class="bg-light">
-    <div class="container py-5">
-        <div class="header-section text-center">
-            <div class="row justify-content-center">
-                <div class="col-md-3 mb-4">
-                    <img src="foto.jpeg" alt="Ayunda Maulani Harmanda" class="profile-photo img-fluid mx-auto d-block">
-                </div>
-                <div class="col-md-8">
-                    <h1 class="name display-4 fw-bold">Ayunda Maulani Harmanda</h1>
-                    <div class="university h3 mb-2">Universitas Negeri Medan</div>
-                    <div class="major h4">Program Studi Bisnis Digital</div>
-                </div>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-person-circle me-2"></i>Ayunda Maulani
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#alasan">Alasan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="content-section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-title-primary">
-                        <i class="bi bi-person-circle me-2"></i>Profile Singkat
-                    </h2>
-                    
-                    <p class="lead fs-5 mb-4">
-                        Halo, perkenalkan nama saya <strong>Ayunda Maulani Harmanda</strong> dengan NIM 7243250011. Lebih akrab dipanggil Ayunda atau Yuyun.
-                    </p>
-
-                    <div class="hobbies-section mb-5">
-                        <h5 class="fw-bold text-muted mb-4">
-                            <i class="bi bi-heart-fill text-danger me-2"></i>Hobi Saya:
-                        </h5>
-                        <div class="hobby-buttons">
-                            <span class="hobby-btn hobby-edit">
-                                <i class="bi bi-scissors"></i> Ngedit
-                            </span>
-                            <span class="hobby-btn hobby-dance">
-                                <i class="bi bi-music-note-beamed"></i> Menari
-                            </span>
-                            <span class="hobby-btn hobby-book">
-                                <i class="bi bi-book"></i> Baca Novel
-                            </span>
-                            <span class="hobby-btn hobby-badminton">
-                                <i class="bi bi-basket"></i> Badminton
-                            </span>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">Ayunda Maulani Harmanda</h1>
+                        <p class="lead mb-4">
+                            Mahasiswi <strong>Bisnis Digital</strong><br>Universitas Negeri Medan
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#profile" class="btn btn-primary btn-lg px-4 py-2">Lihat Profile</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-2">Hubungi Saya</a>
                         </div>
                     </div>
-
-                    <p class="fs-5">
-                        Saya adalah mahasiswi semester 4 yang sedang mengikuti suatu organisasi HMJ Manajemen Unimed dengan divisi media informasi. 
-                        Saya juga sering mengikuti kepanitiaan kampus yang of course menjadi PDD juga.
-                    </p>
-
-                    <h2 class="section-title-success">
-                        <i class="bi bi-gear-fill me-2"></i>Alasan Memilih Jurusan Bisnis Digital
-                    </h2>
-                    
-                    <p class="fs-5">
-                        Alasan saya memilih jurusan Bisnis Digital karena saya percaya bahwa di era di mana hampir setiap aspek kehidupan bertransformasi ke layar, 
-                        kemampuan berbisnis secara digital bukan lagi sekadar nilai tambah, melainkan <strong>kebutuhan mutlak</strong>.
-                    </p>
-
-                    <div class="highlight-box highlight-1">
-                        <i class="bi bi-lightning-charge-fill me-2"></i>
-                        Jurusan ini menarik bagi saya karena ia berada di persimpangan sempurna antara logika data dan seni berinteraksi dengan manusia; 
-                        saya tidak hanya akan belajar membaca algoritma, tren media sosial, dan analitik pasar, tetapi juga bagaimana menyusun strategi pemasaran yang tepat sasaran, 
-                        mengelola platform e-commerce, serta membangun merek yang relevan di dunia maya.
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="profile-image">
+                        <img src="foto ayunda.jpeg" alt="Ayunda Maulani Harmanda" class="img-fluid rounded-circle shadow-lg">
                     </div>
-
-                    <p class="fs-5">
-                        Saya tidak ingin menjadi penonton yang hanya menikmati kemudahan belanja online atau konten viral, 
-                        saya ingin menjadi <em>aktor di balik layar</em> yang menciptakan ekosistem bisnis yang cerdas, terukur, dan berkelanjutan.
-                    </p>
-
-                    <div class="highlight-box highlight-2">
-                        <i class="bi bi-rocket-takeoff-fill me-2"></i>
-                        Lebih dari sekadar teori kewirausahaan, jurusan ini menawarkan keterampilan praktis dan adaptif yang memungkinkan saya untuk tidak hanya bersaing, 
-                        tetapi juga memimpin perubahan di tengah disrupsi teknologi baik itu menjadi seorang digital marketer, analis bisnis, atau membangun startup sendiri.
-                    </div>
-
-                    <p class="fs-5 fw-bold">
-                        Bagi saya, Bisnis Digital adalah <strong>peta untuk menjelajahi lautan peluang tanpa batas</strong>, dan saya siap menjadi nahkoda yang mengarunginya.
-                    </p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer text-center">
-            <p class="mb-0 h5"> © 2024 Ayunda Maulani Harmanda</p>
-            <small>Mahasiswi Bisnis Digital - Universitas Negeri Medan</small>
+    <section id="profile" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">
+                            <i class="bi bi-person-circle text-primary me-3"></i>
+                            Profile Singkat
+                        </h2>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100 profile-card hover-effect">
+                                <div class="card-body text-center p-5">
+                                    <i class="bi bi-people-fill display-4 text-primary mb-4"></i>
+                                    <h5 class="card-title fw-bold fs-3 mb-3">Organisasi & Kepanitiaan</h5>
+                                    <p class="card-text lead">
+                                        Mahasiswi semester 4 aktif di <strong>HMJ Manajemen Unimed</strong> divisi 
+                                        <strong>Media Informasi</strong>. Sering mengikuti kepanitiaan seperti 
+                                        <strong>EXPO FE 2025</strong> dan <strong>GEBYAR MABA 2025</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100 profile-card hover-effect">
+                                <div class="card-body text-center p-5">
+                                    <i class="bi bi-stars display-4 text-success mb-4"></i>
+                                    <h5 class="card-title fw-bold fs-3 mb-4">Hobi Saya</h5>
+                                    <div class="hobi-grid">
+                                        <span class="hobi-tag">
+                                            <i class="bi bi-pencil-square"></i> Desain Grafis
+                                        </span>
+                                        <span class="hobi-tag">
+                                            <i class="bi bi-music-note-beamed"></i> Bernyanyi
+                                        </span>
+                                        <span class="hobi-tag">
+                                            <i class="bi bi-chat-square-dots"></i> Media Sosial
+                                        </span>
+                                        <span class="hobi-tag">
+                                            <i class="bi bi-book"></i> Membaca Novel
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="alasan" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    <i class="bi bi-gear-fill text-warning me-3"></i>
+                    Alasan Memilih Bisnis Digital
+                </h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 alasan-card hover-effect">
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon mb-4">
+                                <i class="bi bi-laptop display-5 text-white"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Era Digital</h5>
+                            <p class="card-text">
+                                Hampir semua aspek bisnis saat ini bergerak secara online - promosi media sosial, e-commerce, hingga pengelolaan data pelanggan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 alasan-card hover-effect">
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon mb-4 bg-success">
+                                <i class="bi bi-images display-5 text-white"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Sesuai Hobi</h5>
+                            <p class="card-text">
+                                Suka editing video, foto, dan desain grafis yang sangat relevan untuk konten iklan, branding, dan strategi pemasaran visual.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 alasan-card hover-effect">
+                        <div class="card-body p-4 text-center">
+                            <div class="card-icon mb-4 bg-warning">
+                                <i class="bi bi-briefcase display-5 text-white"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Prospek Luas</h5>
+                            <p class="card-text">
+                                Bisa jadi digital marketer, content creator, social media specialist, e-commerce analyst, atau memulai bisnis sendiri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="quote-card hover-effect">
+                        <blockquote class="blockquote text-center p-5">
+                            <p class="display-6 fw-bold mb-4">
+                                Today's hard work is tomorrow's pride.
+                            </p>
+                            <footer class="blockquote-footer">
+                                 Ayunda Maulani Harmanda
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-5">
+                        <i class="bi bi-share-fill text-info me-3"></i>
+                        Hubungi Saya
+                    </h2>
+                    
+                    <div class="social-links d-flex justify-content-center gap-4 flex-wrap mb-5">
+                        <a href="https://instagram.com/ayundamaulanii" class="social-btn instagram" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/6281360815523" class="social-btn whatsapp" target="_blank" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://tiktok.com/@yummyeaye" class="social-btn tiktok" target="_blank" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="contact-item hover-effect">
+                                    <i class="bi bi-mortarboard-fill text-primary"></i>
+                                    <div>
+                                        <h6>Universitas</h6>
+                                        <p>Universitas Negeri Medan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item hover-effect">
+                                    <i class="bi bi-laptop text-success"></i>
+                                    <div>
+                                        <h6>Jurusan</h6>
+                                        <p>Bisnis Digital</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item hover-effect">
+                                    <i class="bi bi-calendar3 text-warning"></i>
+                                    <div>
+                                        <h6>Semester</h6>
+                                        <p>4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="bi bi-heart-fill text-danger me-2"></i>
+                © 2024 Ayunda Maulani Harmanda. Digital Business Student | Universitas Negeri Medan
+            </p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
