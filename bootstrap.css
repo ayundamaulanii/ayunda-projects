@@ -5,223 +5,399 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #000;
-    background: rgb(12, 112, 218);
-    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    background-color: #F7F2EB;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px;
-    border: 2px solid #000;
-    border-radius: 10px;
+.navbar {
+    background: rgba(247, 242, 235, 0.95) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(8, 31, 92, 0.1);
+    padding: 1rem 0;
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 3px solid #000;
-    padding-bottom: 20px;
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #334EAC !important;
+    font-weight: 700;
 }
 
-.name {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: rgb(1, 99, 156);
-}
-
-.university {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.major {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #666;
-}
-
-.content {
-    margin-bottom: 40px;
-}
-
-.content h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
-    padding-bottom: 10px;
-    color: rgb(5, 46, 117);
-}
-
-.content p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    text-align: justify;
-    color: #000;
-}
-
-.highlight {
-    background: #f8f9ff;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid rgb(1, 99, 156);
-    font-style: italic;
-    color: #333;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #000;
-    font-size: 0.9em;
-    color: #555;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 20px;
-    display: block;
-    border: 4px solid rgb(5, 46, 117);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* BOOTSTRAP ENHANCEMENTS */
-.header-section {
-    background: linear-gradient(135deg, rgba(248, 249, 255, 0.9), #fff);
-    padding: 30px 0;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.content-section {
-    background: #fafbfc;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    border-left: 5px solid rgb(1, 99, 156);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.section-title-primary {
-    color: rgb(1, 99, 156);
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid rgb(1, 99, 156);
-}
-
-.section-title-success {
-    color: rgb(5, 46, 117);
-    font-weight: bold;
-    margin: 30px 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 3px solid rgb(5, 46, 117);
-}
-
-.hobbies-section {
-    background: linear-gradient(135deg, rgba(248, 249, 255, 0.95), #fff);
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px dashed rgb(1, 99, 156);
-    margin: 25px 0;
-    box-shadow: 0 5px 15px rgba(1, 99, 156, 0.1);
-}
-
-.hobby-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
-
-.hobby-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.9rem;
+.nav-link {
+    font-weight: 500;
+    color: #081F5C !important;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    border: 2px solid rgb(1, 99, 156);
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(1, 99, 156);
-    background: #fff;
+}
+
+.nav-link:hover {
+    color: #F7F2EB !important;
+    background: #334EAC;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #BAD6EB 0%, #7096D1 50%, #334EAC 100%);
+    color: #F7F2EB;
+    padding: 120px 0 80px;
+    min-height: 100vh;
     position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #F7F2EB;
+}
+
+.hero-content .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    color: #FFF9F0;
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 8px solid rgba(186, 214, 235, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 20px 60px rgba(8, 31, 92, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    border-color: #BAD6EB;
+    box-shadow: 0 25px 80px rgba(8, 31, 92, 0.4);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #081F5C;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #BAD6EB, #334EAC);
+    border-radius: 3px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(8, 31, 92, 0.08);
+    transition: all 0.3s ease;
+    background: #FFF9F0;
     overflow: hidden;
 }
 
-.hobby-btn i {
-    margin-right: 6px;
-    font-size: 1rem;
+.hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(8, 31, 92, 0.15) !important;
 }
 
-.hobby-edit { border-color: rgb(1, 99, 156); }
-.hobby-dance { border-color: rgb(5, 46, 117); }
-.hobby-book { border-color: #0066cc; }
-.hobby-badminton { border-color: #004499; }
+.card-body {
+    padding: 2.5rem !important;
+}
 
-.hobby-btn:hover {
+.card-body h3, .card-body p {
+    color: #081F5C;
+}
+
+.hobi-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.hobi-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #BAD6EB, #7096D1);
+    color: #081F5C;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(51, 78, 172, 0.2);
+    cursor: pointer;
+}
+
+.hobi-tag i {
+    color: #081F5C;
+}
+
+.hobi-tag:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(1, 99, 156, 0.3);
-    background: rgb(1, 99, 156);
-    color: #fff;
+    background: linear-gradient(135deg, #7096D1, #334EAC);
+    color: #FFF9F0;
+    box-shadow: 0 8px 25px rgba(51, 78, 172, 0.4);
+}
+
+.hobi-tag:hover i {
+    color: #FFF9F0;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7096D1, #334EAC);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.alasan-card:nth-child(2) .card-icon {
+    background: linear-gradient(135deg, #BAD6EB, #7096D1);
+}
+
+.alasan-card:nth-child(3) .card-icon {
+    background: linear-gradient(135deg, #334EAC, #081F5C);
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: #FFF9F0;
+}
+
+.quote-card {
+    background: linear-gradient(135deg, #BAD6EB, #7096D1);
+    color: #081F5C;
+    border-radius: 25px;
+}
+
+.quote-card p {
+    color: #081F5C !important;
+}
+
+.quote-card .blockquote-footer {
+    color: #334EAC;
+    font-weight: 500;
+}
+
+/* Social Buttons */
+.social-links {
+    margin: 3rem 0;
+}
+
+.social-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(8, 31, 92, 0.2);
+    border: 3px solid transparent;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(8, 31, 92, 0.3);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #334EAC, #7096D1, #BAD6EB);
+    color: #FFF9F0;
+}
+
+.social-btn.whatsapp {
+    background: #334EAC;
+    color: #FFF9F0;
+}
+
+.social-btn.tiktok {
+    background: linear-gradient(45deg, #081F5C, #334EAC);
+    color: #FFF9F0;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #FFF9F0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(8, 31, 92, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(51, 78, 172, 0.12);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    width: 60px;
+    text-align: center;
+    color: #334EAC;
+}
+
+.contact-item h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #081F5C;
+    margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #7096D1;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background: #081F5C;
+    color: #BAD6EB;
+}
+
+.footer p {
+    color: #BAD6EB;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #7096D1, #334EAC);
+    border: none;
+    color: #FFF9F0;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #334EAC, #081F5C);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(51, 78, 172, 0.3);
+    color: #FFF9F0;
+}
+
+.btn-outline-primary {
+    border: 2px solid #334EAC;
+    color: #334EAC;
+    background: transparent;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #334EAC;
+    color: #FFF9F0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-image img {
+        max-width: 280px;
+        height: 280px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 20px 10px;
+    .navbar {
+        padding: 0.75rem 0;
     }
     
-    .container {
-        padding: 20px;
-        margin: 10px;
+    .hero-section {
+        padding: 100px 0 60px;
+        text-align: center;
     }
     
-    .name {
-        font-size: 2em;
+    .hero-content h1 {
+        font-size: 2rem;
     }
     
-    .profile-photo {
-        width: 120px;
-        height: 120px;
+    .hero-content .lead {
+        font-size: 1.1rem;
     }
     
-    .content-section {
-        padding: 20px;
+    .profile-image img {
+        max-width: 250px;
+        height: 250px;
+        margin-top: 2rem;
     }
     
-    .hobby-buttons {
-        gap: 8px;
+    .section-title {
+        font-size: 1.8rem;
     }
     
-    .hobby-btn {
-        padding: 8px 16px;
-        font-size: 0.85rem;
+    .card-body {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .hobi-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .profile-photo {
-        width: 100px;
-        height: 100px;
+    .hero-content h1 {
+        font-size: 1.8rem;
     }
     
-    .hobby-buttons {
-        flex-direction: column;
-        align-items: center;
+    .profile-image img {
+        max-width: 220px;
+        height: 220px;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 }
